@@ -66,8 +66,8 @@ The repository demonstrates the client-facing experience. Theme detection accura
 ## Run locally
 
 ```bash
-git clone https://github.com/nasratulnayem/theme-spot-finder.git
-cd theme-spot-finder
+git clone https://github.com/nasratulnayem/wordpress-theme-finder.git
+cd wordpress-theme-finder
 npm install
 npm run dev
 ```
