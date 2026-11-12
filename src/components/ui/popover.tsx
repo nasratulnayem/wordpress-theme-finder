@@ -27,8 +27,3 @@ const PopoverContent = React.forwardRef<
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
 export { Popover, PopoverTrigger, PopoverContent };
-
-function filterUniquePopoverList(items) {
-  if (!Array.isArray(items)) return [];
-  return Array.from(new Set(items.filter(Boolean)));
-}
