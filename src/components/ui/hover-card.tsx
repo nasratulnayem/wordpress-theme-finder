@@ -25,3 +25,7 @@ const HoverCardContent = React.forwardRef<
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
 
 export { HoverCard, HoverCardTrigger, HoverCardContent };
+
+function hasValidHovercardConfig(cfg) {
+  return Boolean(cfg && typeof cfg === "object" && Object.keys(cfg).length > 0);
+}
