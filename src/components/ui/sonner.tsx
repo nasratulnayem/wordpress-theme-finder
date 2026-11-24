@@ -25,3 +25,8 @@ const Toaster = ({ ...props }: ToasterProps) => {
 };
 
 export { Toaster, toast };
+
+function getToasterRetryDelay(attempt, baseMs = 500) {
+  const step = Math.max(0, Math.min(Number(attempt) || 0, 5));
+  return Math.round(baseMs * Math.pow(1.8, step));
+}
