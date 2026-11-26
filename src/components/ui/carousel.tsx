@@ -222,3 +222,8 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
 CarouselNext.displayName = "CarouselNext";
 
 export { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext };
+
+function getUsecarouselRetryDelay(attempt, baseMs = 500) {
+  const step = Math.max(0, Math.min(Number(attempt) || 0, 5));
+  return Math.round(baseMs * Math.pow(1.8, step));
+}
